@@ -1,0 +1,9 @@
+{
+  "/web/lists/GetByTitle\\('Tasks'\\)/items*": "/tasks",
+  "/web/lists/GetByTitle\\('AppConfig'\\)/items*": "/appConfig",
+  "/api/snap/approvals": "/snap.approval",
+  "/api/bidw/employees": "/bidw.employees",
+  "/api/successFactors/jobRequisitions/me": "/successFactors.jobRequisitions.me",
+  "/api/sap/workItems": "/sap.workItems",
+  "/api/users/me": "/users.me"
+}

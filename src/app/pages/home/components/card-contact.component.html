@@ -1,0 +1,102 @@
+<app-card-modal [opened]="isExpanded" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="My team"
+  (close)="toggleExpand()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</app-card-modal>
+<app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="My team" [canExpand]="!isMobileDevice"
+  (expand)="toggleExpand()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</app-card>
+<ng-template #contentTemplate>
+  <div class="my-2">
+    <ng-container *ngFor="let notification of notifications">
+      <ngb-alert class="my-3" [type]="notification.alertClass" [dismissible]="false">
+        <i [className]="notification.iconClass"></i> {{notification.content}}
+      </ngb-alert>
+    </ng-container>
+    <ng-container *ngIf="!hasEmployees">
+      <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
+        <i class="fa fa-exclamation-circle"></i> {{noDataMessage}}
+      </ngb-alert>
+    </ng-container>
+    <ng-container *ngIf="hasEmployees">
+      <ng-container *ngIf="!hasFilteredEmployees">
+        <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
+          <i class="fa fa-filter"></i> {{filterNoHitsMessage}}
+        </ngb-alert>
+      </ng-container>
+      <ng-container *ngIf="hasFilteredEmployees">
+        <div *ngFor="let item of filteredEmployees" class="my-1">
+          <div class="clickable pipe-group text-truncate" (click)="openModal(userModalTemplate)">
+            <span>{{item.fullName}}</span>
+          </div>
+          <div *ngIf="item.position" class="small">
+            {{item.position}}
+          </div>
+          <div class="pipe-group">
+            <span *ngIf="item.employeeGroup" class="small text-truncate">{{item.employeeGroup}}</span>
+            <span *ngIf="item.employeeSubGroup" class="small text-truncate">{{item.employeeSubGroup}}</span>
+            <span *ngIf="item.workContract" class="small text-truncate">{{item.workContract}}</span>
+          </div>
+          <ng-template #userModalTemplate let-modal>
+            <div class="modal-header">
+              <button type="button" class="close" (click)="modal.dismiss()">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5 class="pipe-group">
+                <span>{{item.fullName}}</span>
+                <span>{{item.id}}</span>
+              </h5>
+              <div *ngIf="item.position">
+                {{item.position}}
+              </div>
+              <div class="pipe-group">
+                <span *ngIf="item.employeeGroup" class="text-truncate">{{item.employeeGroup}}</span>
+                <span *ngIf="item.employeeSubGroup" class="text-truncate">{{item.employeeSubGroup}}</span>
+                <span *ngIf="item.workContract" class="text-truncate">{{item.workContract}}</span>
+              </div>
+              <hr />
+              <div class="row no-gutters my-2">
+                <div class="col-3">Work</div>
+                <div class="col pipe-group">
+                  <span *ngIf="item.mobilePhone && !phoneLink" class="text-truncate">{{item.mobilePhone}}</span>
+                  <span *ngIf="item.mobilePhone && phoneLink">
+                    <a [href]="phoneLink + sanitizePhoneNumber(item.mobilePhone) | safeUrl" class="text--truncate">{{item.mobilePhone}}</a>
+                  </span>
+                  <span *ngIf="item.officePhone && !phoneLink" class="text-truncate">{{item.officePhone}}</span>
+                  <span *ngIf="item.officePhone && phoneLink">
+                    <a [href]="phoneLink + sanitizePhoneNumber(item.officePhone) | safeUrl" class="text--truncate">{{item.officePhone}}</a>
+                  </span>
+                </div>
+              </div>
+              <div *ngIf="item.otherMobilePhone" class="row no-gutters my-2">
+                <div class="col-3">Personal</div>
+                <div class="col">
+                  <span *ngIf="!phoneLink" class="text-truncate">{{item.otherMobilePhone}}</span>
+                  <a *ngIf="phoneLink" class="text--truncate" [href]="phoneLink + sanitizePhoneNumber(item.otherMobilePhone) | safeUrl">{{item.otherMobilePhone}}</a>
+                </div>
+              </div>
+              <div *ngIf="item.emergencyContactName" class="row no-gutters my-2">
+                <div class="col-3">Emergency</div>
+                <div class="col-auto mr-3">
+                  <span class="text-truncate">{{item.emergencyContactName}}</span>
+                </div>
+                <div class="col pipe-group">
+                  <span *ngIf="item.emergencyContactPhoneNumber && !phoneLink" class="text-truncate">{{item.emergencyContactPhoneNumber}}</span>
+                  <span *ngIf="item.emergencyContactPhoneNumber && phoneLink">
+                    <a [href]="phoneLink + sanitizePhoneNumber(item.emergencyContactPhoneNumber) | safeUrl" class="text--truncate">{{item.emergencyContactPhoneNumber}}</a>
+                  </span>
+                  <span *ngIf="item.emergencyContactPhoneNumber2 && !phoneLink" class="text-truncate">{{item.emergencyContactPhoneNumber2}}</span>
+                  <span *ngIf="item.emergencyContactPhoneNumber2 && phoneLink">
+                    <a [href]="phoneLink + sanitizePhoneNumber(item.emergencyContactPhoneNumber2) | safeUrl" class="text--truncate">{{item.emergencyContactPhoneNumber2}}</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-template>

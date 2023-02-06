@@ -1,0 +1,210 @@
+{
+  "bidw.employees": [
+    {
+      "leave": [
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2019-12-31T12:00:00",
+          "leaveEndDate": "2020-12-31T12:00:00",
+          "leaveType": "Personal leave",
+          "absenceDays": 0.0,
+          "absenceHours": 0.0,
+          "leaveCategory": "Personal Leave"
+        },
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2019-12-31T12:00:00",
+          "leaveEndDate": "2020-01-03T12:00:00",
+          "leaveType": "Long-service leave",
+          "absenceDays": 3,
+          "absenceHours": 21.75,
+          "leaveCategory": "Long Service Leave"
+        },
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2020-01-03T12:00:00",
+          "leaveEndDate": "2020-01-10T12:00:00",
+          "leaveType": "Personal leave",
+          "absenceDays": 7,
+          "absenceHours": 50.75,
+          "leaveCategory": "Personal Leave"
+        },
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2020-01-10T12:00:00",
+          "leaveEndDate": "2020-01-20T12:00:00",
+          "leaveType": "Annual leave",
+          "absenceDays": 20,
+          "absenceHours": 145,
+          "leaveCategory": "Annual Leave"
+        },
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2020-01-20T12:00:00",
+          "leaveEndDate": "2020-02-19T12:00:00",
+          "leaveType": "Other leave",
+          "absenceDays": 20,
+          "absenceHours": 145,
+          "leaveCategory": "Other Leave"
+        }
+      ],
+      "keyDates": [
+        {
+          "dateOfTask": "2020-01-01T12:00:00",
+          "taskType": "01 Expiry of Probation",
+          "taskDescription": "Probation expiry",
+          "processingIndicator": "Pending"
+        },
+        {
+          "dateOfTask": "2020-01-19T12:00:00",
+          "taskType": "26 Review Loading",
+          "taskDescription": "Review loading",
+          "processingIndicator": "Pending"
+        },
+        {
+          "dateOfTask": "2020-01-28T12:00:00",
+          "taskType": "27 Review PT Arrangements",
+          "taskDescription": "Review part-time arrangements",
+          "processingIndicator": "Pending"
+        },
+        {
+          "dateOfTask": "2020-01-30T12:00:00",
+          "taskType": "28 Review WFH",
+          "taskDescription": "Review working for home",
+          "processingIndicator": "Pending"
+        }
+      ],
+      "temporaryAssignments": [
+        {
+          "number": "12345",
+          "shortDescription": "Acting as UI Developer",
+          "state": "Active",
+          "startDate": "2020-01-10T12:00:00",
+          "employmentEndDate": "2020-01-10T12:00:00",
+          "parent": null,
+          "positionName": "UI Developer",
+          "manager": "faker.name.findName()",
+          "subCategory": "Development"
+        }
+      ],
+      "employeeNumber": "00211727",
+      "fullName": "faker.name.findName()",
+      "dateOfBirth": "1980-01-10T12:00:00",
+      "emailAddress": "faker.internet.email()",
+      "officePhone": "(07) 3866-1294",
+      "mobilePhone": "0412 345 678",
+      "otherMobile": "0412 345 666",
+      "emergencyContactName": "faker.name.findName()",
+      "emergencyContactPhoneNumber": "0422226068",
+      "emergencyContactPhoneNumber2": "0422226067",
+      "powerlinkStartDate": "2019-01-01T12:00:00",
+      "hierarchyLevel": 0,
+      "employeeGroup": "Employee Group",
+      "employeeSubGroup": "Staff Contract",
+      "workContract": "Permanent Full-Time",
+      "positionName": "Developer"
+    },
+    {
+      "leave": [
+        {
+          "leaveBookingDate": "2020-01-01T00:00:00",
+          "leaveStartDate": "2020-01-01T00:00:00",
+          "leaveEndDate": "2020-01-02T00:00:00",
+          "leaveType": "LV-Sick w/o Cert",
+          "absenceDays": 2,
+          "absenceHours": 14.5,
+          "leaveCategory": "Other Leave"
+        },
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2020-01-10T12:00:00",
+          "leaveEndDate": "2020-01-30T12:00:00",
+          "leaveType": "RDOB",
+          "absenceDays": 20,
+          "absenceHours": 145,
+          "leaveCategory": "RDOB"
+        }
+      ],
+      "keyDates": [
+        {
+          "dateOfTask": "2019-08-01T12:00:00",
+          "taskType": "01 Expiry of Probation",
+          "taskDescription": "Probation expiry",
+          "processingIndicator": "Pending"
+        },
+        {
+          "dateOfTask": "2020-09-01T12:00:00",
+          "taskType": "29 Review Work Hours",
+          "taskDescription": "Review working hours",
+          "processingIndicator": "Pending"
+        },
+        {
+          "dateOfTask": "2020-01-12T12:00:00",
+          "taskType": "06 Training Period",
+          "taskDescription": "Training period",
+          "processingIndicator": "Pending"
+        }
+      ],
+      "employeeNumber": "00211728",
+      "fullName": "Kedar Sivashanmugam",
+      "dateOfBirth": "1991-02-14T00:00:00",
+      "emailAddress": "KedarSivashanmugam@powerlink.com.au",
+      "officePhone": "(07) 3866-1294",
+      "mobilePhone": "0412 345 678",
+      "emergencyContactName": "Jane Peters",
+      "emergencyContactPhoneNumber": "0422226068",
+      "powerlinkStartDate": "1984-11-24T00:00:00",
+      "hierarchyLevel": 3,
+      "employeeGroup": "Employee Group",
+      "employeeSubGroup": "Staff Contract",
+      "workContract": "Temporary Full-Time",
+      "positionName": "Technical Lead"
+    },
+    {
+      "leave": [
+        {
+          "leaveBookingDate": "2019-12-01T12:00:00",
+          "leaveStartDate": "2020-03-01T00:00:00",
+          "leaveEndDate": "2020-03-02T00:00:00",
+          "leaveType": "LV-Vacation",
+          "absenceDays": 1,
+          "absenceHours": 7.25,
+          "leaveCategory": "Other Leave"
+        }
+      ],
+      "employeeNumber": "00211729",
+      "fullName": "Robert Dalla",
+      "dateOfBirth": "1971-07-28T00:00:00",
+      "emailAddress": "vsrinivasan@powerlink.com.au",
+      "OfficePhone": "(07) 3866-1294",
+      "mobilePhone": "0412 345 678",
+      "otherMobile": "0412 345 666",
+      "emergencyContactName": "Mark Peters",
+      "emergencyContactPhoneNumber": "0422226068",
+      "emergencyContactPhoneNumber2": "0422226067",
+      "powerlinkStartDate": "1994-11-24T00:00:00",
+      "hierarchyLevel": 1,
+      "employeeGroup": "Employee Group",
+      "employeeSubGroup": "Staff Contract",
+      "workContract": "Permanent Full-Time",
+      "positionName": "Team Leader"
+    },
+    {
+      "leave": [],
+      "employeeNumber": "00211729",
+      "fullName": "Euan Kennedy",
+      "dateOfBirth": "1975-01-20T12:00:00",
+      "emailAddress": "vsrinivasan@powerlink.com.au",
+      "OfficePhone": "(07) 3866-1294",
+      "mobilePhone": "0412 345 678",
+      "emergencyContactName": "Mark Peters",
+      "emergencyContactPhoneNumber": "0422226068",
+      "powerlinkStartDate": "1994-01-24T00:00:00",
+      "hierarchyLevel": 2,
+      "employeeGroup": "Employee Group",
+      "employeeSubGroup": "Staff Contract",
+      "workContract": "Temporary Part-Time",
+      "positionName": "Director"
+    }
+  ]
+}

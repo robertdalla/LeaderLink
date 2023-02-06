@@ -1,0 +1,60 @@
+<div class="container-fluid bg-black pt-3 pb-2">
+  <div class="row">
+    <div class="col-12">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><i class="fa fa-search"></i></div>
+        </div>
+        <input #search type="text" class="form-control" placeholder="Search team members..."
+          (input)="homeService.onSearch(search.value)" />
+        <div class="input-group-append" ngbDropdown>
+          <button class="btn btn-primary dropdown-toggle-none" style="width: 150px;" ngbDropdownToggle>
+            {{homeService.filterValue}} <i class="fa fa-filter" title="Filter"></i>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button [ngClass]="{'active': homeService.filterValue == filterType.All}" ngbDropdownItem
+              (click)="homeService.onFilter(filterType.All)">{{filterType.All}}</button>
+            <button [ngClass]="{'active': homeService.filterValue == filterType.Direct}" ngbDropdownItem
+              (click)="homeService.onFilter(filterType.Direct)">{{filterType.Direct}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul class="nav nav-pills nav-fill bg-black px-3 pb-2">
+  <li class="nav-item">
+    <a class="nav-link link-white px-2 py-1" routerLink="Tasks" routerLinkActive="active">
+      <i class="fa fa-check-square fa-2x"></i>
+      <div *ngIf="tasksCount > 0" class="text-white bg-black tasks-notification">
+        <div style="margin-top: -2px; text-align: center;">{{tasksCount < 100 ? tasksCount : '+99'}}</div>
+      </div>
+      <span class="d-block small">Quick links</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-white px-2 py-1" routerLink="Contacts" routerLinkActive="active">
+      <div class="text-center"><i class="fa fa-users fa-2x"></i></div>
+      <div class="text-center x-small">My team</div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-white px-2 py-1" routerLink="Leave" routerLinkActive="active">
+      <i class="fa fa-calendar fa-2x"></i>
+      <span class="d-block small">Leave</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-white px-2 py-1" routerLink="Reminders" routerLinkActive="active">
+      <div class="text-center"><i class="fa fa-bell fa-2x"></i></div>
+      <div class="text-center x-small">Reminders</div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link link-white px-2 py-1" routerLink="Recruitment" routerLinkActive="active">
+      <div class="text-center"><i class="fa fa-handshake-o fa-2x"></i></div>
+      <div class="text-center x-small">Recruitment</div>
+    </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

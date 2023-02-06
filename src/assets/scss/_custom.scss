@@ -1,0 +1,400 @@
+@import './variables';
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $white;
+  position: relative;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  -ms-overflow-style: scrollbar; // Fix for IE: Scrollbars do not overlay content, and therefore take up extra layout space along the edges of the element where they appear
+}
+
+a {
+  outline: none !important; /* Remove outline border */
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* hides the spin-button for webkit browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+/* Does the same in mozilla */
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+/* in IE will remove the clear button when input element is not empty  */
+input[type="text"]::-ms-clear {
+  width : 0;
+  height: 0;
+}
+input[type="search"]::-ms-clear {
+  width : 0;
+  height: 0;
+}
+
+
+
+
+/********************** Nav **********************/
+.navbar-nav > li.dropdown {
+  position: relative;
+}
+
+.navbar-light {
+  .navbar-nav {
+    > .nav-link {
+      color: $color_tundora;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $color_1 !important;
+      }
+      &:focus {
+        color: $color_1 !important;
+      }
+    }
+  }
+
+  &.darkHeader {
+    .navbar-nav {
+      .nav-link {
+        &.active {
+          color: $color_bright_turquoise;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.theme-nav {
+  .navbar {
+    background-color: transparent;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    padding: 20px 0 20px 7px;
+    color: $color_tapa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      .nav-link {
+        color: $color_2;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &.dropdown {
+      .dropdown-menu {
+        min-width: 200px;
+        background: $white;
+        display: none;
+        left: 15px;
+        right: 0;
+        margin: 0;
+        border: 0;
+        opacity: 0;
+        padding: 20px;
+        visibility: hidden;
+        border-radius: 0;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.17);
+        transition: all 0.6s ease-in;
+
+        .nav-item {
+          .nav-link {
+            padding: 5px;
+            font-size: 13px;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &.active {
+              color: $color_2 !important;
+            }
+
+            &:hover {
+              color: $color_2 !important;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown-menu {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &:last-child .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+
+    &:first-child .dropdown-menu {
+      left: 15px;
+    }
+  }
+
+  /*Dropdown css*/
+  .dropdown-menu {
+    .nav-item {
+      font-size: 13px;
+      padding: 5px 10px;
+      padding: 0;
+    }
+
+    .nav-link {
+      color: $color_tapa !important;
+    }
+  }
+
+  &.darkHeader {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .dropdown-menu .nav-item {
+      padding: 0;
+
+      .nav-link {
+        &.active {
+          color: $color_2;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    .nav-item {
+      padding: 0;
+    }
+  }
+
+  > li {
+    &.dropdown {
+      position: relative;
+    }
+  }
+
+  &.darkHeader {
+    .dropdown-menu {
+      .nav-item {
+        padding: 0;
+      }
+    }
+  }
+
+  /*dropdown css end*/
+  .navbar-nav {
+    .active {
+      > .nav-link {
+        color: $color_2;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.fixed-top {
+  //padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.darkHeader {
+  background: $white;
+  box-shadow: 1px 1px 12px 1px rgba(221, 221, 221, 0.4);
+  padding: 0;
+  transition: all 0.3s ease;
+
+  &.theme-nav .nav-item {
+    padding: 20px 0 20px 7px;
+  }
+}
+
+
+/********************** Footer **********************/
+.footer-bg {
+  background-color: $white;
+}
+
+.footer-text {
+  text-align: center;
+
+  h2 {
+    margin: 25px auto;
+  }
+
+  p {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 25px;
+  }
+
+  .footer-form {
+    padding: 0;
+
+    .form-control {
+      border-radius: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      min-height: 64px;
+    }
+  }
+}
+
+.footer-icon {
+  position: absolute;
+  top: -3px;
+}
+
+.footer-style {
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+
+    & + li {
+      margin-top: 50px;
+    }
+
+    &:nth-last-child(1) .footer-icon {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-address {
+  a {
+    padding-left: 35px;
+    color: $white !important;
+    letter-spacing: 0.03em;
+    line-height: 22px;
+    margin-bottom: 0;
+    display: block;
+  }
+}
+
+
+/********************** Scroll to top'' icon **********************/
+.tap-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 150px;
+  right: 30px;
+  z-index: 99;
+  color: $white;
+  text-align: center;
+  background: linear-gradient(to top, $color_bright_turquoise, $color_turquoise);
+  border-radius: 100%;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 2.2;
+  display: none;
+  border: 1px solid $white;
+}
+
+
+
+
+.noOutline {
+  outline: none; /* Remove outline border */
+}
+
+.fakelink {
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.card-header {
+  padding: 0.5rem 1rem;
+}
+
+.tasks-notification {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-left: -5px;
+  margin-bottom: -2em;
+  padding-top: 5px;
+  border: 2px solid yellow;
+  border-radius: 50%;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-blue {
+  background-color: #0288d1;
+}
+
+.bg-orange {
+  background-color: #f57f17;
+}
+
+.bg-green-80 {
+  background-color: rgba(0, 150, 136, 0.8);
+}
+
+.text-black-100 {
+  color: rgba(0, 0, 0, 1);
+}
+
+.text-red-100 {
+  color: rgba(255, 0, 0, 1);
+}
+
+.x-small {
+  font-size: 70%;
+}
+
+
+.draggable_dialog {
+  position: fixed;
+
+  .container {
+    height: 100%;
+    padding: 15px;
+    user-select: none;
+    background-color: white;
+    border: 1px solid rgba(55,50,60,.2);
+    border-radius: 4px;
+    box-shadow: 0 0 20px 0 rgba(55,50,60,.5);
+  }
+}

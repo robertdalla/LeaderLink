@@ -1,0 +1,27 @@
+.fixed50 {
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+}
+
+.badge-black {
+  color: white;
+  background-color: #212529;
+}
+
+.text-black {
+  color: #212529;
+}
+
+.text-90 {
+  font-size: 90%;
+}
+
+.text-130 {
+  font-size: 130%;
+}
+
+.task-item {
+  background-color: #dee2e6;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+}

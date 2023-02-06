@@ -1,0 +1,19 @@
+.fixed-top {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.page-header-bg {
+  background-image: url('src/assets/img/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+}
+
+@media(max-width: 991px) {
+  #navbarSupportedContent {
+    background: #f6f7f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+}

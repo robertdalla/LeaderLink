@@ -1,0 +1,31 @@
+<app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="Team whereabouts">
+  <div class=my-2>
+    <ng-container *ngFor="let notification of notifications">
+      <ngb-alert class="my-3" [type]="notification.alertClass" [dismissible]="false">
+        <i [className]="notification.iconClass"></i> {{notification.content}}
+      </ngb-alert>
+    </ng-container>
+    <div *ngIf="!hasLeaves">
+      <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
+        <i class="fa fa-exclamation-circle"></i> {{noDataMessage}}
+      </ngb-alert>
+    </div>
+    <ng-container *ngIf="hasLeaves">
+      <ng-container *ngIf="!hasFilteredLeaves">
+        <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
+          <i class="fa fa-filter"></i> {{filterNoHitsMessage}}
+        </ngb-alert>
+      </ng-container>
+      <ng-container *ngIf="hasFilteredLeaves">
+        <div *ngFor="let item of filteredLeaves" class="row no-gutters my-1">
+          <div class="col-1"><i [ngClass]="getIcon(item)"></i></div>
+          <div class="col text-truncate">
+            <div class="text-truncate">{{item.content}}</div>
+            <div class="small text-truncate">{{item.typeDescription}}</div>
+          </div>
+          <div class="col-auto">{{item.start | date: 'dd MMM'}} - {{item.end | date: 'dd MMM'}}</div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</app-card>

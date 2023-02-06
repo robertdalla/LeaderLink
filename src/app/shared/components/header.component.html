@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top px-lg-0"
+  [ngClass]="{'darkHeader': useDarkHeaderClass, 'page-header-bg': useBackgroundClass}">
+  <div class="container-fluid" style="max-width: 1400px;">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="assets/img/logo.png" width="170" alt="logo">
+    </a>
+    <ng-container *ngIf="!isMobileDevice">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" id="mymenu">
+          <li *ngFor="let item of links" class="nav-item">
+            <a class="nav-link" [target]="item.target || '_blank'" [attr.href]="item.url">{{item.text}}</a>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </div>
+</nav>

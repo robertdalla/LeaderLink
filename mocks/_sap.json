@@ -1,0 +1,19 @@
+{
+  "sap.workItems": [
+    {
+      "id": "TS91000075",
+      "description": "Timesheet approvals",
+      "count": 1
+    },
+    {
+      "id": "WS91000010",
+      "description": "Leave approvals",
+      "count": 3
+    },
+    {
+      "id": "WS91000020",
+      "description": "Purchase requisitions",
+      "count": 0
+    }
+  ]
+}

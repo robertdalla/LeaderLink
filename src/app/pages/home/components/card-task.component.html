@@ -1,0 +1,35 @@
+<app-card [isMobileDevice]="isMobileDevice" headerClass="bg-blue" headerText="Quick links">
+  <ng-container *ngFor="let notification of notifications">
+    <ngb-alert class="my-3" [type]="notification.alertClass" [dismissible]="false">
+      <i [className]="notification.iconClass"></i> {{notification.content}}
+    </ngb-alert>
+  </ng-container>
+  <div *ngFor="let item of tasks" class="row no-gutters my-2">
+    <div class="col fixed50 d-flex align-items-center">
+      <ng-container [ngSwitch]="item.renderType">
+        <ng-container *ngSwitchCase="'Badge'">
+          <span class="badge badge-pill badge-black text-90">
+            {{item.staticValue}}
+          </span>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Icon'">
+          <i class="text-130" [ngClass]="item.staticValue"></i>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Error'">
+          <i class="text-130 text-danger fa fa-exclamation-triangle"></i>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+          <i class='text-130 fa fa-spinner fa-spin'></i>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="col">
+      <div class="task-item border" [ngClass]="{'border-danger': item.error}">
+        <a [attr.href]="item.href" [attr.target]="item.target" [ngClass]="{'clickable': item.isClickable}">
+          {{item.taskText}}
+          <div class="text-danger small" *ngIf="item.error">{{item.error.content}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</app-card>

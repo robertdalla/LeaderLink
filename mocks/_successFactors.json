@@ -1,0 +1,68 @@
+{
+  "successFactors.jobRequisitions.me": [
+    {
+      "jobReqId": 758,
+      "jobTitle": "Technical Analyst Grade 3",
+      "internalStatus": "Pending",
+      "lastModifiedDateTime": "2020-01-01T12:00:00",
+      "closedDateTime": "2020-01-10T12:00:00",
+      "currentOwner": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "hiringManager": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "externalStatus": "Pending approval"
+    },
+    {
+      "jobReqId": 662,
+      "jobTitle": "Executive Assistant",
+      "internalStatus": "Completed",
+      "lastModifiedDateTime": "2020-01-01T12:00:00",
+      "closedDateTime": "2020-01-10T12:00:00",
+      "currentOwner": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "hiringManager": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "externalStatus": "Approved"
+    },
+    {
+      "jobReqId": 1252,
+      "jobTitle": "Senior Intelligence Analyst",
+      "internalStatus": "Pending",
+      "lastModifiedDateTime": "2020-01-01T12:00:00",
+      "closedDateTime": "2020-01-10T12:00:00",
+      "currentOwner": {
+        "username": "Kedar Sivashanmugam",
+        "email": "KedarSivashanmugam@powerlink.com.au"
+      },
+      "hiringManager": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "externalStatus": "Open"
+    },
+    {
+      "jobReqId": 1444,
+      "jobTitle": "Senior Intelligence Analyst",
+      "internalStatus": "Pending",
+      "lastModifiedDateTime": "2020-01-01T12:00:00",
+      "closedDateTime": "2020-01-10T12:00:00",
+      "currentOwner": {
+        "username": "Euan Kennedy",
+        "email": "vsrinivasan@powerlink.com.au"
+      },
+      "hiringManager": {
+        "username": "Kedar Sivashanmugam",
+        "email": "KedarSivashanmugam@powerlink.com.au"
+      },
+      "externalStatus": "Open"
+    }
+  ]
+}

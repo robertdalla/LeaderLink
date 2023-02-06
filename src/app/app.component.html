@@ -1,0 +1,15 @@
+<app-header></app-header>
+<ngx-spinner>
+  <p style="font-size: 20px; color: black">Loading...</p>
+</ngx-spinner>
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+<ng-container *ngIf="showLogMessages">
+  <div style="overflow-x: auto">
+    <pre>
+      {{messages | json}}
+    </pre>
+  </div>
+</ng-container>

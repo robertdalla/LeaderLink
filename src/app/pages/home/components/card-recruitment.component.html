@@ -1,0 +1,32 @@
+<app-card-modal [opened]="isExpanded" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80"
+  headerText="Recruitment" (close)="toggleExpand()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</app-card-modal>
+<app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="Recruitment"
+  [canExpand]="!isMobileDevice" (expand)="toggleExpand()">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</app-card>
+<ng-template #contentTemplate>
+  <div class="my-2">
+    <ng-container *ngFor="let notification of notifications">
+      <ngb-alert class="my-3" [type]="notification.alertClass" [dismissible]="false">
+        <i [className]="notification.iconClass"></i> {{notification.content}}
+      </ngb-alert>
+    </ng-container>
+    <ng-container *ngIf="!hasRecruitment">
+      <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
+        <i class="fa fa-exclamation-circle"></i> {{noDataMessage}}
+      </ngb-alert>
+    </ng-container>
+    <ng-container *ngIf="hasRecruitment">
+      <div *ngFor="let item of recruitment" class="my-1">
+        <div class="text-truncate">{{item.jobTitle}} ({{item.id}})</div>
+        <div class="pipe-group">
+          <span *ngIf="item.externalStatus" class="small text-truncate">{{item.externalStatus}}</span>
+        </div>
+      </div>
+    </ng-container>
+    <a *ngFor="let item of links" [attr.href]="item.url" [attr.target]="item.target"
+      class="btn btn-primary btn-sm btn-block">{{item.text}}</a>
+  </div>
+</ng-template>

@@ -1,0 +1,76 @@
+@import './assets/scss/variables';
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'font-awesome/css/font-awesome.css';
+@import 'angular2-draggable/css/resizable.min.css';
+@import "./assets/scss/custom";
+@import "./assets/scss/responsive";
+@import "./assets/scss/override-owl-caroussel";
+
+.page-content {
+  padding-top: 70px;
+}
+
+.card-header {
+  padding: map-get($spacers, 2) $spacer;
+}
+
+.card-section-header {
+  margin-bottom: map-get($spacers, 2);
+  margin-left: -$card-spacer-x;
+  margin-right: -$card-spacer-x;
+  padding: map-get($spacers, 2) $spacer;
+  background-color: $gray-300;
+}
+
+.dropdown-toggle-none.dropdown-toggle {
+  &:after {
+    display: none;
+  }
+}
+
+.modal-header {
+  padding: map-get($spacers, 2);
+
+  & .close {
+    margin-right: - map-get($spacers, 2);
+    outline: none !important;
+  }
+}
+
+.clickable {
+  cursor: pointer !important;
+  color: $link-color;
+  font-weight: $headings-font-weight;
+
+  .card-header & {
+    color: $light;
+  }
+
+  .card-section-header & {
+    color: $dark;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none !important;
+  }
+}
+
+.scroll-y {
+  overflow-y: auto !important;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
+}
+
+.scroll {
+  overflow: auto !important;
+}
+
+.no-copy {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}

@@ -1,0 +1,17 @@
+@import './variables';
+
+.owl-carousel {
+
+  .owl-nav {
+
+    button.owl-prev, button.owl-next {
+      outline: none !important; /* Remove outline border */
+
+      &:hover {
+        background-color: transparent;
+        color: $color_4;
+        text-decoration: none;
+      }
+    }
+  }
+}

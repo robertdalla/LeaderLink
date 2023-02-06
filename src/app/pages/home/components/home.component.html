@@ -1,0 +1,47 @@
+<div class="container-fluid mt-3 mb-4" style="max-width: 1400px;">
+  <div class="row mb-2">
+    <div class="col-sm-12 col-lg-6 offset-lg-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><i class="fa fa-search"></i></div>
+        </div>
+        <input #search type="text" class="form-control" placeholder="Search team members..."
+          (input)="homeService.onSearch(search.value)" />
+        <div class="input-group-append" ngbDropdown>
+          <button class="btn btn-primary dropdown-toggle-none" style="width: 150px;" ngbDropdownToggle>
+            {{homeService.filterValue}} <i class="fa fa-filter" title="Filter"></i>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button [ngClass]="{'active': homeService.filterValue == filterType.All}" ngbDropdownItem
+              (click)="homeService.onFilter(filterType.All)">{{filterType.All}}</button>
+            <button [ngClass]="{'active': homeService.filterValue == filterType.Direct}" ngbDropdownItem
+              (click)="homeService.onFilter(filterType.Direct)">{{filterType.Direct}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-4">
+      <div class="mb-4">
+        <app-card-task></app-card-task>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="mb-4">
+        <app-card-reminder></app-card-reminder>
+      </div>
+      <div class="mb-4">
+        <app-card-leave></app-card-leave>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="mb-4">
+        <app-card-contact></app-card-contact>
+      </div>
+      <div class="mb-4">
+        <app-card-recruitment></app-card-recruitment>
+      </div>
+    </div>
+  </div>
+</div>
