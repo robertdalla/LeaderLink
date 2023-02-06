@@ -32,6 +32,6 @@ export interface IRecruitment {
 }
 
 export interface IWorkItems {
-  items: Array<WorkItem>,
+  items: Array<WorkItem>;
   errors: Array<Notification>;
 }

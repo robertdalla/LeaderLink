@@ -6,10 +6,10 @@ import { map, tap, switchMap, catchError } from 'rxjs/operators';
 import { WindowService } from './window.service';
 import { ApiService } from './api.service';
 import { SharePointService } from './share-point.service';
-import *  as appConfigActions from '../store/app-config.actions';
-import *  as appUserActions from '../store/app-user.actions';
+import * as appConfigActions from '../store/app-config.actions';
+import * as appUserActions from '../store/app-user.actions';
 import { AppConfigItem, AppUser } from '../models';
-import { IAppStore } from '../store/app-store'
+import { IAppStore } from '../store/app-store';
 import { LoggingService } from './logging.service';
 
 @Injectable({
@@ -79,11 +79,11 @@ export class AppConfigService {
         map(AppUser.FromObject),
         tap(x => {
           this.appUser = x;
-          this.store.dispatch(appUserActions.set({ item: x }))
+          this.store.dispatch(appUserActions.set({ item: x }));
         }),
         map(x => {
           this.loggingService.info('AppConfigService/loadAppConfig(completed)');
-          return this.appConfig
+          return this.appConfig;
         }),
         catchError(error => {
           this.loggingService.error(error, 'AppConfigService/loadAppConfig(error)', error);

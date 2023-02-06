@@ -10,7 +10,7 @@ export const isUrl = (value: string, noDomain: boolean = false): boolean => {
   } else {
     return /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/.test(value);
   }
-}
+};
 
 export const isNumber = (value: string): boolean => isFinite(parseFloat(value));
 
@@ -19,4 +19,4 @@ export const isEmpty = (value: string): boolean => isNil(value) || value.trim() 
 export const parseFloatOrDefault = (value: any, defaultValue = 0): number => {
   const num = parseFloat(value);
   return isFinite(num) ? num : defaultValue;
-}
+};

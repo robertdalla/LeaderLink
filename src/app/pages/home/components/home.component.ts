@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.homeService.loadWorkItems().pipe(catchError(x => of(undefined)))
     ]).subscribe({
       complete: () => {
-        this.loadingService.hide()
+        this.loadingService.hide();
       }
     });
   }

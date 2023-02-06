@@ -1,5 +1,5 @@
 import invariant from 'invariant';
-import { MessageType } from './message-type'
+import { MessageType } from './message-type';
 
 export class Message {
   readonly type: MessageType;

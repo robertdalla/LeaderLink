@@ -48,7 +48,7 @@ export class CardReminderComponent implements OnDestroy {
     this.isMobileDevice = this.windowService.isMobileDevice();
     this.subscription.add(this.appConfigService.appConfig$.subscribe(this.setAppConfig));
     this.subscription.add(this.homeService.employees$.subscribe(this.setNotifications));
-    this.subscription.add(this.homeService.birthdaysAndAnniversaries$.subscribe(this.setBirthdaysAndAnniversaries))
+    this.subscription.add(this.homeService.birthdaysAndAnniversaries$.subscribe(this.setBirthdaysAndAnniversaries));
     this.subscription.add(this.homeService.reminders$.subscribe(this.setReminders));
     this.subscription.add(this.homeService.filteredReminders$.subscribe(this.setFilteredReminders));
   }

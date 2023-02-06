@@ -2,7 +2,7 @@ import { Injectable, Injector } from '@angular/core';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 import * as StackTrace from 'stacktrace-js';
-import { Message } from '../models'
+import { Message } from '../models';
 
 @Injectable({
   providedIn: 'root'

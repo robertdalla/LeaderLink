@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 const options: any = {
-  type: (function () {
+  type: (function() {
     const spinners = ['ball-8bits', 'ball-climbing-dot', 'ball-newton-cradle', 'ball-running-dots', 'pacman', 'timer'];
     return spinners[Math.floor(Math.random() * spinners.length)];
   })(),
@@ -19,7 +19,7 @@ export class LoadingService {
   constructor(private spinner: NgxSpinnerService) { }
 
   show = (name?: string): void => {
-    this.spinner.show(name, options)
+    this.spinner.show(name, options);
   }
 
   hide = (name?: string): void => {
