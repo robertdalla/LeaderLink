@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "managerSelfService": {
+    "leaderLink": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/managerSelfService",
+            "outputPath": "dist/leaderLink",
             "index": "src/index.aspx",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,14 +62,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "managerSelfService:build",
+            "browserTarget": "leaderLink:build",
             "hmr": true,
             "hmrWarning": false,
             "port": 4300
           },
           "configurations": {
             "production": {
-              "browserTarget": "managerSelfService:build:production",
+              "browserTarget": "leaderLink:build:production",
               "port": 4300
             }
           }
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "managerSelfService:build"
+            "browserTarget": "leaderLink:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "managerSelfService:serve"
+            "devServerTarget": "leaderLink:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "managerSelfService:serve:production"
+              "devServerTarget": "leaderLink:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "managerSelfService"
+  "defaultProject": "leaderLink"
 }
