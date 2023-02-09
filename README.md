@@ -1,29 +1,61 @@
-# OrgPortal
+# LeaderLink
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+LeaderLink is a single page application, a web app for managing and tracking the progress of a leadership program.
+The app is responsive across desktop, tablet and mobile devices, built with Angular @^12, Bootstrap @^5, and Sass, rxjs is used for state management.
+
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) @^8 and then progressively upgraded to @^12 which is the last version to support end-to-end tests with [Protractor](http://www.protractortest.org/)
+
+<img src="https://user-images.githubusercontent.com/8167628/217879827-9837a0ef-c178-4390-ac25-baa0fb4b2c96.png" alt="Screenshot tablet/laptop/desktop" width="auto" height="auto">
+
+<img src="https://user-images.githubusercontent.com/8167628/217881229-447a923c-b06c-4f0f-88f0-31858e1c5cfb.png" alt="Screenshot mobile phone" width="auto" height="auto">
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-Run `npm run mock:server` to mock dev api endpoints, can update mocks/data.json and will automatically reload.  
-Run `npm run start:server` for both a dev and mock servers.
+The app will automatically reload when any of the source files changes.
 
-## Code scaffolding
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run mock:server` to mock dev api endpoints with local data, will automatically reload when mocks/data.json changes.  
+Run `npm run start:mock` for both local data via mock server and dev server.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.   
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  
+
 Run `npm run build:prod` for production build, update environment.prod.ts to match the host environment.
+
+## Running Lint tests
+
+Run `npm run lint` to execute the Lint tests with [TSLint](https://palantir.github.io/tslint/)
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests with [Karma](https://karma-runner.github.io)
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests with [Jasmine](https://jasmine.github.io/) and [Protractor](http://www.protractortest.org/)
+
+With local data via mock server: `npm run e2e:mock`
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component.
+
+You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+
+
+## Browser Support
+
+Support for the last two versions of the following browsers:
+
+<img src="https://user-images.githubusercontent.com/8167628/217873263-6c82b338-0224-4cba-a838-fbda3c9369be.png" alt="Chrome" width="64" height="64"> <img src="https://user-images.githubusercontent.com/8167628/217873253-9ed89380-46d7-4a7a-b061-fbdcd3b434c9.png" width="64" height="64" alt="Firefox"> <img src="https://user-images.githubusercontent.com/8167628/217873244-e04d4bcd-b74c-4f7d-b186-5dc7531a9850.png" width="64" height="64" alt="Edge"> <img src="https://user-images.githubusercontent.com/8167628/217873233-14d55c72-8510-4c43-822f-4d696081ec73.png" width="64" height="64" alt="Safari"> <img src="https://user-images.githubusercontent.com/8167628/217873214-a4312eef-d83d-4526-b0fa-15a6630af966.png" width="64" height="64" alt="Opera">
+
+## Licensing
+
+- Copyright 2023 [Mojo Soup](https://mojosoup.com.au/)
+- Mojo Soup [license terms](https://mojosoup.com.au/terms/)
 
 ## Further help
 

@@ -1,8 +1,8 @@
 {
   "name": "leaderlink",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "private": true,
-  "author": "Robert Dalla & Tom Banh",
+  "author": "Robert Dalla & Tom Banh for Mojo Soup Pty Ltd",
   "description": "Mobile application for PowerLink",
   "homepage": "https://github.com/robertdalla/LeaderLink",
   "repository": {
