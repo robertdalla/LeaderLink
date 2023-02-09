@@ -10,7 +10,7 @@ body {
   position: relative;
   font-size: 15px;
   font-family: Helvetica, Arial, sans-serif;
-  -ms-overflow-style: scrollbar; // Fix for IE: Scrollbars do not overlay content, and therefore take up extra layout space along the edges of the element where they appear
+  -ms-overflow-style: scrollbar; /* Fix for IE: Scrollbars do not overlay content, and therefore take up extra layout space along the edges of the element where they appear */
 }
 
 a {
@@ -160,7 +160,7 @@ input[type="search"]::-ms-clear {
     }
   }
 
-  /*Dropdown css*/
+  /* Dropdown css */
   .dropdown-menu {
     .nav-item {
       font-size: 13px;
@@ -222,7 +222,7 @@ input[type="search"]::-ms-clear {
 }
 
 .fixed-top {
-  //padding-top: 15px;
+  /* padding-top: 15px; */
   padding-bottom: 15px;
   transition: all 0.3s ease;
 }
