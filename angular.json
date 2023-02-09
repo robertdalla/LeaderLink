@@ -67,7 +67,6 @@
           "options": {
             "browserTarget": "leaderLink:build",
             "hmr": true,
-            "hmrWarning": false,
             "port": 4300
           },
           "configurations": {
