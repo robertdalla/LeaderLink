@@ -1,0 +1,198 @@
+{
+  "appConfig": {
+    "d": {
+      "results": [
+        {
+          "Title": "App.Title",
+          "Value": "LeaderLink"
+        },
+        {
+          "Title": "App.Mobile.Title",
+          "Value": "LL"
+        },
+        {
+          "Title": "App.ApiBaseUrl",
+          "Value": "http://localhost:3000/api"
+        },
+        {
+          "Title": "App.Desktop.PhoneLink",
+          "Value": "tel:"
+        },
+        {
+          "Title": "App.Mobile.PhoneLink",
+          "Value": "callto:"
+        },
+        {
+          "Title": "Home.DateRangeFilter",
+          "Value": "28"
+        },
+        {
+          "Title": "ContactCard.Messages",
+          "Value": "{\"NoData\": \"We found no employees currently reporting to you.\", \"FilterNoHits\": \"No data matches your current search or filter.\", \"Error\": \"We had trouble retrieving data for this card. Please refresh the page again in a few moments.\"}"
+        },
+        {
+          "Title": "LeaveCard.Messages",
+          "Value": "{\"NoData\": \"We found no leave that's current now or starting within the next 28 days.\", \"FilterNoHits\": \"No data matches your current search or filter.\", \"Error\": \"We had trouble retrieving data for this card. Please refresh the page again in a few moments.\"}"
+        },
+        {
+          "Title": "LeaveCard.Links",
+          "Value": "[{\"Enable\": true, \"Text\": \"Open leave dashboard\", \"Url\": \"https://www.soupmail.com\"}]"
+        },
+        {
+          "Title": "LeaveCard.LeaveCategories",
+          "Value": "[{\"Name\": \"Annual Leave\", \"Icon\": \"fa fa-plane\"}, {\"Name\": \"Long Service Leave\", \"Icon\": \"fa fa-trophy\"}, {\"Name\": \"Personal Leave\", \"Icon\": \"fa fa-sun-o\"}, {\"Name\": \"Other Leave\", \"Icon\": \"fa fa-suitcase\"}, {\"Name\": \"RDOB\", \"Icon\": \"fa fa-calculator\"}]"
+        },
+        {
+          "Title": "RecruitmentCard.Messages",
+          "Value": "{\"NoData\": \"We found no recruitment currently assign to you.\", \"FilterNoHits\": \"No data matches your current search or filter.\", \"Error\": \"We had trouble retrieving data for this card. Please refresh the page again in a few moments.\"}"
+        },
+        {
+          "Title": "RecruitmentCard.Links",
+          "Value": "[{\"Enable\": true, \"Text\": \"Open recruitment dashboard\", \"Url\": \"https://www.soupmail.com\"}, {\"Enable\": true, \"Text\": \"Open recruitment procedure\", \"Url\": \"https://www.soupmail.com\"}, {\"Enable\": true, \"Text\": \"Create new job requisition\", \"Url\": \"https://www.soupmail.com\"}]"
+        },
+        {
+          "Title": "RecruitmentCard.Mobile.Links",
+          "Value": "[{\"Enable\": true, \"Text\": \"Open recruitment dashboard\", \"Url\": \"https://www.soupmail.com\"}, {\"Enable\": true, \"Text\": \"Open recruitment procedure\", \"Url\": \"https://www.soupmail.com\"}, {\"Enable\": true, \"Text\": \"Create new job requisition\", \"Url\": \"https://www.soupmail.com\"}]"
+        },
+        {
+          "Title": "RemindersCard.Messages",
+          "Value": "{\"NoData\": \"We found no reminders for upcoming events.\", \"FilterNoHits\": \"No data matches your current search or filter.\", \"Error\": \"We had trouble retrieving data for this card. Please refresh the page again in a few moments.\", \"AnniversaryTooltip\": \"Anniversaries do not necessarily indicate continuity of service.\"}"
+        },
+        {
+          "Title": "RemindersCard.ReminderCategories",
+          "Value": "[{\"Name\": \"26 Review Loading\", \"Icon\": \"fa fa-home\"}, {\"Name\": \"27 Review PT Arrangements\", \"Icon\": \"fa fa-handshake-o\"}, {\"Name\": \"28 Review WFH\", \"Icon\": \"fa fa-briefcase\"}, {\"Name\": \"29 Review Work Hours\", \"Icon\": \"fa fa-clock-o\"}, {\"Name\": \"06 Training Period\", \"Icon\": \"fa fa-calendar\"},{\"Name\": \"Birthday\", \"Icon\": \"fa fa-birthday-cake\"},{\"Name\": \"Anniversary\", \"Icon\": \"fa fa-certificate\"},{\"Name\": \"Assignment\", \"Icon\": \"fa fa-hourglass-end\"},{\"Name\": \"Probation\", \"Icon\": \"fa fa-address-book\"}]"
+        },
+        {
+          "Title": "TeamCard.Messages",
+          "Value": "{\"NoData\": \"We found no leave that's current now or starting within the next 28 days.\", \"FilterNoHits\": \"No data matches your current search or filter.\", \"Error\": \"We had trouble retrieving data for this card. Please refresh the page again in a few moments.\"}"
+        },
+        {
+          "Title": "users/me",
+          "Value": "{\"user\": \"powerlink/vsrinivasan\", \"username\": \"vsrinivasan\", \"authenticationType\": \"NTLM\"}"
+        },
+        {
+          "Title": "snap/approvals",
+          "Value": "{\"count\": 30}"
+        },
+        {
+          "Title": "bidw/employees",
+          "Value": "[\n  {\n    \"leave\": [\n      {\n        \"leaveBookingDate\": \"2020-07-20T00:00:00\",\n        \"leaveStartDate\": \"2020-07-21T00:00:00\",\n        \"leaveEndDate\": \"2020-07-29T00:00:00\",\n        \"leaveType\": \"LV-Vacation\",\n        \"absenceDays\": 8,\n        \"absenceHours\": 65.25\n      },\n      {\n        \"leaveBookingDate\": \"2020-08-01T00:00:00\",\n        \"leaveStartDate\": \"2020-08-01T00:00:00\",\n        \"leaveEndDate\": \"2020-08-01T00:00:00\",\n        \"leaveType\": \"LV-Vacation\",\n        \"absenceDays\": 1,\n        \"absenceHours\": 7.25\n      },\n      {\n        \"leaveBookingDate\": \"2019-07-09T00:00:00\",\n        \"leaveStartDate\": \"2020-08-03T00:00:00\",\n        \"leaveEndDate\": \"2020-08-03T00:00:00\",\n        \"leaveType\": \"LV-Vacation\",\n        \"absenceDays\": 1,\n        \"absenceHours\": 7.25\n      }\n    ],\n    \"employeeNumber\": \"00211727\",\n    \"fullName\": \"Tom Banh\",\n    \"dateOfBirth\": \"1980-09-12T00:00:00\",\n    \"emailAddress\": \"vsrinivasan@powerlink.com.au\",\n    \"officePhone\": \"(07) 3866-1294\",\n    \"mobilePhone\": \"0412 345 678\",\n    \"emergencyContactName\": \"Janelle Short\",\n    \"emergencyContactPhoneNumber\": \"0422226068\",\n    \"powerlinkStartDate\": \"2014-07-24T00:00:00\",\n    \"hierarchyLevel\": 0\n  },\n  {\n    \"leave\": [\n      {\n        \"leaveBookingDate\": \"2019-01-12T00:00:00\",\n        \"leaveStartDate\": \"2020-07-22T00:00:00\",\n        \"leaveEndDate\": \"2020-07-22T00:00:00\",\n        \"leaveType\": \"LV-Sick w/o Cert\",\n        \"absenceDays\": 1,\n        \"absenceHours\": 7.25\n      }\n    ],\n    \"employeeNumber\": \"00211728\",\n    \"fullName\": \"Kedar Sivashanmugam\",\n    \"dateOfBirth\": \"1991-02-14T00:00:00\",\n    \"emailAddress\": \"vsrinivasan@powerlink.com.au\",\n    \"officePhone\": \"(07) 3866-1294\",\n    \"mobilePhone\": \"0412 345 678\",\n    \"emergencyContactName\": \"Jane Peters\",\n    \"emergencyContactPhoneNumber\": \"0422226068\",\n    \"powerlinkStartDate\": \"1984-11-24T00:00:00\",\n    \"hierarchyLevel\": 3\n  },\n  {\n    \"leave\": [\n      {\n        \"leaveBookingDate\": \"2020-08-03T00:00:00\",\n        \"leaveStartDate\": \"2020-08-03T00:00:00\",\n        \"leaveEndDate\": \"2020-08-03T00:00:00\",\n        \"leaveType\": \"LV-Vacation\",\n        \"absenceDays\": 1,\n        \"absenceHours\": 7.25\n      }\n    ],\n    \"employeeNumber\": \"00211729\",\n    \"fullName\": \"Robert Dalla\",\n    \"dateOfBirth\": \"1971-07-28T00:00:00\",\n    \"emailAddress\": \"vsrinivasan@powerlink.com.au\",\n    \"officePhone\": \"(07) 3866-1294\",\n    \"mobilePhone\": \"0412 345 678\",\n    \"emergencyContactName\": \"Mark Peters\",\n    \"emergencyContactPhoneNumber\": \"0422226068\",\n    \"powerlinkStartDate\": \"1994-11-24T00:00:00\",\n    \"hierarchyLevel\": 0\n  },\n  {\n    \"leave\": [],\n    \"employeeNumber\": \"00211729\",\n    \"fullName\": \"Euan Kennedy\",\n    \"dateOfBirth\": \"1971-07-21T00:00:00\",\n    \"emailAddress\": \"vsrinivasan@powerlink.com.au\",\n    \"officePhone\": \"(07) 3866-1294\",\n    \"mobilePhone\": \"0412 345 678\",\n    \"emergencyContactName\": \"Mark Peters\",\n    \"emergencyContactPhoneNumber\": \"0422226068\",\n    \"powerlinkStartDate\": \"1994-11-24T00:00:00\",\n    \"hierarchyLevel\": 0\n  }\n]"
+        }
+      ]
+    }
+  },
+  "tasks": {
+    "d": {
+      "results": [
+        {
+          "Mode": "ANY",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": "sap/workItems",
+          "DynamicValueResponseElement": "TS91000075",
+          "CurrentFrom": "2020-06-30T14:00:00Z",
+          "CurrentTo": "2025-12-30T14:00:00Z",
+          "TaskType": "DYNAMIC",
+          "TaskText": "Timesheet approvals",
+          "StaticValue": null
+        },
+        {
+          "Mode": "ANY",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": "sap/workItems",
+          "DynamicValueResponseElement": "WS91000010",
+          "CurrentFrom": "2020-06-30T14:00:00Z",
+          "CurrentTo": "2025-12-30T14:00:00Z",
+          "TaskType": "DYNAMIC",
+          "TaskText": "Leave approvals",
+          "StaticValue": null
+        },
+        {
+          "Mode": "ANY",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": "sap/workItems",
+          "DynamicValueResponseElement": "WS91000020",
+          "CurrentFrom": "2020-06-30T14:00:00Z",
+          "CurrentTo": "2025-12-30T14:00:00Z",
+          "TaskType": "DYNAMIC",
+          "TaskText": "Purchase requisitions",
+          "StaticValue": null
+        },
+        {
+          "Mode": "DESKTOP",
+          "ClickOrTouchURL": "https://mojosoup.com.au",
+          "ClickOrTouchAction": "TARGETBLANK",
+          "DynamicValueEndpoint": null,
+          "DynamicValueResponseElement": null,
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2020-03-31T14:00:00Z",
+          "TaskType": "STATIC",
+          "TaskText": "Mojo Soup!",
+          "StaticValue": "7"
+        },
+        {
+          "Mode": "MOBILE",
+          "ClickOrTouchURL": "https://mojosoup.com.au",
+          "ClickOrTouchAction": "TARGETBLANK",
+          "DynamicValueEndpoint": null,
+          "DynamicValueResponseElement": null,
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2020-04-16T14:00:00Z",
+          "TaskType": "STATIC",
+          "TaskText": "Mojo Soup! MOBILE",
+          "StaticValue": "8"
+        },
+        {
+          "Mode": "DESKTOP",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": "snap/approvals",
+          "DynamicValueResponseElement": "count",
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2027-04-15T14:00:00Z",
+          "TaskType": "DYNAMIC",
+          "TaskText": "SNaP approvals",
+          "StaticValue": null
+        },
+        {
+          "Mode": "ANY",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": "successFactors/jobRequisitions/me",
+          "DynamicValueResponseElement": "count",
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2027-04-24T14:00:00Z",
+          "TaskType": "DYNAMIC",
+          "TaskText": "Job requisitions",
+          "StaticValue": null
+        },
+        {
+          "Mode": "ANY",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": null,
+          "DynamicValueResponseElement": null,
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2020-04-14T14:00:00Z",
+          "TaskType": "STATIC",
+          "TaskText": "A task with a font-awesome icon",
+          "StaticValue": "fa fa-check-square-o"
+        },
+        {
+          "Mode": "DESKTOP",
+          "ClickOrTouchURL": null,
+          "ClickOrTouchAction": null,
+          "DynamicValueEndpoint": null,
+          "DynamicValueResponseElement": null,
+          "CurrentFrom": "2019-06-30T14:00:00Z",
+          "CurrentTo": "2026-04-16T14:00:00Z",
+          "TaskType": "STATIC",
+          "TaskText": "Some link to a resource",
+          "StaticValue": "fa fa-thumbs-o-up"
+        }
+      ]
+    }
+  }
+}

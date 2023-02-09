@@ -5,7 +5,7 @@ var bidw = require('./_bidw.json');
 var successFactors = require('./_successFactors.json');
 var sap = require('./_sap.json');
 var users = require('./_users.json');
-var sharePoint = require('./_sharePoint.json');
+var sharePointE2e = require('./_sharePoint-e2e.json');
 
 const evalFakers = (obj) => {
   if (lodash.isArray(obj)) {
@@ -31,7 +31,7 @@ evalFakers(users);
 
 module.exports = () => {
   return {
-    ...sharePoint,
+    ...sharePointE2e,
     ...snap,
     ...bidw,
     ...successFactors,
