@@ -9,4 +9,4 @@
 last 2 versions
 Firefox ESR
 not dead
-IE 9-11
+# IE 9-11 # IE 9-11 are no longer supported from angular@11
