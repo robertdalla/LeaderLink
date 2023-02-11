@@ -46,7 +46,6 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer];
   declarations: [
     AppComponent
   ],
-  entryComponents: [],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: ErrorHandler, useClass: GlobalErrorHandler },

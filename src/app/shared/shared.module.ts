@@ -20,7 +20,6 @@ import { NotFoundComponent } from './components/not-found.component';
     FooterComponent,
     NotFoundComponent
   ],
-  entryComponents: [],
   exports: [
     SafeUrlPipe,
     HeaderComponent,
