@@ -34,7 +34,6 @@ import { CardRecruitmentComponent } from './components/card-recruitment.componen
     CardModalComponent,
     CardRecruitmentComponent
   ],
-  entryComponents: [],
   providers: [],
   exports: [
     HomeComponent,
