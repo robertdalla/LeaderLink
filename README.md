@@ -1,14 +1,14 @@
 # LeaderLink
 
 LeaderLink is a single page application, a web app for managing and tracking the progress of a leadership program.
-The app is responsive across desktop, tablet and mobile devices, built with Angular @^12 and Typescript @~4.3, Bootstrap @^5 and Sass. Rxjs is used for state management.
+The app is responsive across desktop, tablet and mobile devices, built with Angular @^12 and Typescript @~4.3, Bootstrap @~4.5 and Sass. Rxjs is used for state management.
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) @8 and then progressively upgraded to @^12 which is the last version to support [TSLint](https://palantir.github.io/tslint/) tests and e2e tests with [Protractor](http://www.protractortest.org/)
 
 ### Frameworks and Libraries
 
-| Angular @^12 | Bootstrap @^5 | Moment | Draggable |
-|--------------|---------------|--------|-----------|
+| Angular @^12 | Bootstrap @~4.5 | Moment | Draggable |
+|--------------|-----------------|--------|-----------|
 ###
 
 <img src="https://user-images.githubusercontent.com/8167628/217879827-9837a0ef-c178-4390-ac25-baa0fb4b2c96.png" alt="Screenshot tablet/laptop/desktop" width="auto" height="auto">
@@ -19,11 +19,12 @@ This project was originally generated with [Angular CLI](https://github.com/angu
 
 ## Development server
 
-The app will automatically reload when any of the source files changes.
+The app will automatically reload when any of the source files changes. Navigate to `http://localhost:4300/`
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`.
+Run `npm run start` for a dev server.
 
-Run `npm run mock:server` to mock dev api endpoints with local data, will automatically reload when mocks/data.json changes.  
+Run `npm run mock:server` for a mock server alone. Will mock dev api endpoints with local data and automatically reload when mocks/data.json changes.  
+
 Run `npm run start:mock` for both local data via mock server and dev server.
 
 ## Build
