@@ -40,7 +40,7 @@
     "@ngrx/store": "^12.5.1",
     "@ngrx/store-devtools": "^12.5.1",
     "angular2-draggable": "^2.3.2",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^4.6.2",
     "classlist.js": "^1.1.20150312",
     "core-js": "^3.27.2",
     "font-awesome": "^4.7.0",
