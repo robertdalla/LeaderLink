@@ -1,37 +1,52 @@
-import { Component, Input, Output, EventEmitter, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChildren,
+  QueryList,
+  AfterViewInit,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-card-modal',
   template: `
-    <div #modal *ngIf="opened" class="draggable_dialog" ngDraggable="true" ngResizable="true" [position]="position"
-         [zIndex]="zIndex" [rzMinWidth]="minWidth" [rzMinHeight]="minHeight">
+    <div #customModal class="draggable_dialog" ngDraggable="true" ngResizable="true"
+         [position]="position" [zIndex]="zIndex" [rzMinWidth]="minWidth" [rzMinHeight]="minHeight">
       <div class="container" [style.minWidth.px]="minWidth">
         <div class="card">
-          <div class="card-header text-white d-flex flex-row justify-content-between" [ngClass]="headerClass">
+          <div [ngClass]="cardHeaderClass()">
             {{headerText}}
-            <span><i class="fa fa-times clickable" (click)="onClose()" title="Close"></i></span>
+            <span (click)="closeModal()"><i class="fa fa-times clickable" title="Close"></i></span>
           </div>
-          <div class="card-body py-0">
+          <div class="card-body py-0" [ngStyle]="cardBodyStyle()">
             <ng-content></ng-content>
           </div>
         </div>
       </div>
     </div>
-  `
+  `,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardModalComponent implements AfterViewInit {
   @Input() isMobileDevice: boolean;
   @Input() headerClass: string;
   @Input() headerText: string;
-  @Input() opened: boolean;
   @Input() position: { x: number, y: number } = { x: 0, y: 0 };
   @Input() zIndex: string = '1040';
   @Input() minWidth: number = 500;
   @Input() minHeight: number = 0;
-  // tslint:
+  @Input() maxHeight: string;
+  @Output() onClose = new EventEmitter();
+  @ViewChildren('customModal') cardDiv: QueryList<any>;
 
-  @Output() closeCard = new EventEmitter<any>();
-  @ViewChildren('modal') cardDiv: QueryList<any>;
+  constructor(
+  )
+  {
+  }
 
   ngAfterViewInit(): void {
     this.cardDiv.changes.subscribe(x => {
@@ -41,7 +56,18 @@ export class CardModalComponent implements AfterViewInit {
     });
   }
 
-  onClose = () => {
-    this.closeCard.emit();
+  cardHeaderClass = (): string => {
+    return `card-header text-white d-flex flex-row justify-content-between ${this.isMobileDevice ? 'rounded-0' : ''} ${this.headerClass ? this.headerClass : ''}`;
+  }
+
+  cardBodyStyle = (): object => {
+    return this.maxHeight
+      ? { maxHeight: this.maxHeight, overflow: 'auto' }
+      : {};
+  }
+
+  closeModal() {
+    console.log('clicked closeModal');
+    this.onClose.emit();
   }
 }

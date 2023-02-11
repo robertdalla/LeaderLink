@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { isEmpty, get, chain } from 'lodash';
 import { WindowService, Notification, AppConfigService, NavItem } from 'src/app/core';
@@ -10,7 +10,8 @@ import { RecruitmentItem } from '../services/recruitment-item';
   selector: 'app-card-recruitment',
   templateUrl: './card-recruitment.component.html',
   styleUrls: ['./card-recruitment.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardRecruitmentComponent implements OnDestroy {
   private subscription = new Subscription();
@@ -59,5 +60,9 @@ export class CardRecruitmentComponent implements OnDestroy {
 
   toggleExpand = (): void => {
     this.isExpanded = !this.isExpanded;
+  }
+
+  expandClosed = (): void => {
+    this.isExpanded = false;
   }
 }

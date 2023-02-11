@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { isEmpty, get } from 'lodash';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +11,8 @@ import { HomeService } from '../services/home.service';
   selector: 'app-card-contact',
   templateUrl: './card-contact.component.html',
   styleUrls: ['./card-contact.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardContactComponent implements OnDestroy {
   private subscription = new Subscription();
@@ -22,14 +23,16 @@ export class CardContactComponent implements OnDestroy {
   hasEmployees: boolean;
   hasFilteredEmployees: boolean;
   isMobileDevice: boolean;
-  isExpanded: boolean;
+  isExpanded: boolean = false;
   phoneLink: string;
 
   constructor(
     private windowService: WindowService,
     private appConfigService: AppConfigService,
     private homeService: HomeService,
-    private modalService: NgbModal) {
+    private modalService: NgbModal,
+  )
+  {
     this.isMobileDevice = this.windowService.isMobileDevice();
     this.subscription.add(this.appConfigService.appConfig$.subscribe(this.setMessages));
     this.subscription.add(this.homeService.employees$.subscribe(this.setNotifications));
@@ -70,5 +73,9 @@ export class CardContactComponent implements OnDestroy {
 
   toggleExpand = (): void => {
     this.isExpanded = !this.isExpanded;
+  }
+
+  expandClosed = (): void => {
+    this.isExpanded = false;
   }
 }

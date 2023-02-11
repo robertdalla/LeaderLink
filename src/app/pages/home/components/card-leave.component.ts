@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { isEmpty, find, get, chain } from 'lodash';
 import { WindowService, Notification, AppConfigService, NavItem } from 'src/app/core';
@@ -10,7 +10,8 @@ import { HomeService } from '../services/home.service';
   selector: 'app-card-leave',
   templateUrl: './card-leave.component.html',
   styleUrls: ['./card-leave.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardLeaveComponent implements OnDestroy {
   private subscription = new Subscription();
@@ -73,5 +74,9 @@ export class CardLeaveComponent implements OnDestroy {
 
   toggleExpand = (): void => {
     this.isExpanded = !this.isExpanded;
+  }
+
+  expandClosed = (): void => {
+    this.isExpanded = false;
   }
 }

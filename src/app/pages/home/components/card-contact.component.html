@@ -1,5 +1,4 @@
-<app-card-modal [opened]="isExpanded" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="My team"
-  (close)="toggleExpand()">
+<app-card-modal *ngIf="isExpanded" (onClose)="expandClosed()" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="My team">
   <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
 </app-card-modal>
 <app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="My team" [canExpand]="!isMobileDevice"

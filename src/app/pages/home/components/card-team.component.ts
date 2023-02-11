@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { isEmpty, find, get } from 'lodash';
 import { WindowService, Notification, AppConfigService } from 'src/app/core';
@@ -10,7 +10,8 @@ import { HomeService } from '../services/home.service';
   selector: 'app-card-team',
   templateUrl: './card-team.component.html',
   styleUrls: ['./card-team.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardTeamComponent implements OnDestroy {
   private subscription = new Subscription();

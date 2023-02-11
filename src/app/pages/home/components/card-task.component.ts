@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import {Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { WindowService, Notification } from 'src/app/core';
 import { TaskItem } from '../services/task-item';
@@ -9,7 +9,8 @@ import { HomeService } from '../services/home.service';
   selector: 'app-card-task',
   templateUrl: './card-task.component.html',
   styleUrls: ['./card-task.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardTaskComponent implements OnDestroy {
   private subscription = new Subscription();

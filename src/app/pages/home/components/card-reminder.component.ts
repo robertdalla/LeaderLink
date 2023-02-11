@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { isEmpty, filter, sortBy, get, find } from 'lodash';
 import { WindowService, Notification, AppConfigService } from 'src/app/core';
@@ -17,7 +17,8 @@ enum SortColumn {
   selector: 'app-card-reminder',
   templateUrl: './card-reminder.component.html',
   styleUrls: ['./card-reminder.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardReminderComponent implements OnDestroy {
   private subscription = new Subscription();
@@ -89,8 +90,16 @@ export class CardReminderComponent implements OnDestroy {
     this.isExpanded = !this.isExpanded;
   }
 
+  expandClosed = (): void => {
+    this.isExpanded = false;
+  }
+
   toggleFullListExpand = (): void => {
     this.isFullListExpanded = !this.isFullListExpanded;
+  }
+
+  fullExpandClosed = (): void => {
+    this.isFullListExpanded = false;
   }
 
   toggleNameSort = (): void => {

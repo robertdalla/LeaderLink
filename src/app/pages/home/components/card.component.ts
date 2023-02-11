@@ -1,4 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,13 +13,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     <div class="card" [ngClass]="{'border-0 rounded-0': isMobileDevice}">
       <div [ngClass]="cardHeaderClass()">
         {{headerText}}
-        <span *ngIf="canExpand"><i class="fa fa-expand clickable" (click)="onExpand()" title="Expand"></i></span>
+        <span *ngIf="canExpand" (click)="onExpand()"><i class="fa fa-expand clickable" title="Expand"></i></span>
       </div>
       <div class="card-body py-0" [ngStyle]="cardBodyStyle()">
         <ng-content></ng-content>
       </div>
     </div>
-  `
+  `,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class CardComponent {
   @Input() isMobileDevice: boolean;
@@ -21,6 +30,11 @@ export class CardComponent {
   @Input() maxHeight: string;
   @Input() canExpand: boolean;
   @Output() expand = new EventEmitter();
+
+  constructor(
+  )
+  {
+  }
 
   cardHeaderClass = (): string => {
     return `card-header text-white d-flex flex-row justify-content-between ${this.isMobileDevice ? 'rounded-0' : ''} ${this.headerClass ? this.headerClass : ''}`;
