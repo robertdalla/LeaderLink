@@ -29,7 +29,7 @@ export class CardComponent {
   @Input() headerText: string;
   @Input() maxHeight: string;
   @Input() canExpand: boolean;
-  @Output() expand = new EventEmitter();
+  @Output() expanded = new EventEmitter();
 
   constructor(
   )
@@ -47,6 +47,6 @@ export class CardComponent {
   }
 
   onExpand = (): void => {
-    this.expand.emit();
+    this.expanded.emit();
   }
 }

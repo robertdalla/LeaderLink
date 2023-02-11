@@ -40,7 +40,7 @@ export class CardModalComponent implements AfterViewInit {
   @Input() minWidth: number = 500;
   @Input() minHeight: number = 0;
   @Input() maxHeight: string;
-  @Output() onClose = new EventEmitter();
+  @Output() closed = new EventEmitter();
   @ViewChildren('customModal') cardDiv: QueryList<any>;
 
   constructor(
@@ -67,7 +67,6 @@ export class CardModalComponent implements AfterViewInit {
   }
 
   closeModal() {
-    console.log('clicked closeModal');
-    this.onClose.emit();
+    this.closed.emit();
   }
 }
