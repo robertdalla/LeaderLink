@@ -35,7 +35,7 @@ export class CardModalComponent implements AfterViewInit {
   @Input() isMobileDevice: boolean;
   @Input() headerClass: string;
   @Input() headerText: string;
-  @Input() position: { x: number, y: number } = { x: 0, y: 0 };
+  @Input() position: { x: number, y: number } = { x: 20, y: 30 };
   @Input() zIndex: string = '1040';
   @Input() minWidth: number = 500;
   @Input() minHeight: number = 0;

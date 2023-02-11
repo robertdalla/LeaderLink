@@ -3,10 +3,7 @@
   <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
 </app-card-modal>
 
-<app-card-modal *ngIf="isFullListExpanded" (onClose)="fullExpandClosed()" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80"
-  headerText="Team birthdays and anniversaries" (close)="toggleFullListExpand()">
-  <ng-container *ngTemplateOutlet="fullListTemplate"></ng-container>
-</app-card-modal>
+
 
 <app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="Reminders"
   [canExpand]="!isMobileDevice" (expand)="toggleExpand()">
@@ -19,6 +16,7 @@
       <i [className]="notification.iconClass"></i> {{notification.content}}
     </ngb-alert>
   </ng-container>
+
   <div class="card-section-header">Key dates</div>
   <ng-container *ngIf="!hasReminders">
     <ngb-alert class="my-3" [type]="'info'" [dismissible]="false">
@@ -40,6 +38,12 @@
       <div class="col-auto">{{item.start | date: 'dd MMM'}}</div>
     </div>
   </ng-container>
+
+  <app-card-modal *ngIf="isFullListExpanded" (onClose)="fullExpandClosed()" [isMobileDevice]="isMobileDevice" headerClass="bg-green-80"
+                  headerText="Team birthdays and anniversaries" (close)="toggleFullListExpand()">
+    <ng-container *ngTemplateOutlet="fullListTemplate"></ng-container>
+  </app-card-modal>
+
   <div class="card-section-header">
     Birthdays and anniversaries
     <span *ngIf="hasFullList" class="pull-right clickable" (click)="toggleFullListExpand()">

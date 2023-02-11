@@ -2,10 +2,12 @@
   headerText="Recruitment" (close)="toggleExpand()">
   <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
 </app-card-modal>
+
 <app-card [isMobileDevice]="isMobileDevice" headerClass="bg-green-80" headerText="Recruitment"
   [canExpand]="!isMobileDevice" (expand)="toggleExpand()">
   <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
 </app-card>
+
 <ng-template #contentTemplate>
   <div class="my-2">
     <ng-container *ngFor="let notification of notifications">
