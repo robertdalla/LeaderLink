@@ -1,11 +1,12 @@
-var lodash = require('lodash');
-var faker = require('faker');
-var snap = require('./_snap.json');
-var bidw = require('./_bidw.json');
-var successFactors = require('./_successFactors.json');
-var sap = require('./_sap.json');
-var users = require('./_users.json');
-var sharePointE2e = require('./_sharePoint-e2e.json');
+const lodash = require('lodash');
+const faker = require('faker');
+
+let snap = require('./_snap.json');
+let bidw = require('./_bidw.json');
+let successFactors = require('./_successFactors.json');
+let sap = require('./_sap.json');
+let users = require('./_users.json');
+let sharePointE2e = require('./_sharePoint-e2e.json');
 
 const evalFakers = (obj) => {
   if (lodash.isArray(obj)) {

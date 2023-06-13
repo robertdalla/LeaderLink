@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>LeaderLink</title>
   <script type="text/javascript">
-    var baseURL = document.location;
+    const baseURL = document.location;
     document.write('<base href="' + baseURL + '" />');
   </script>
   <meta name="author" content="MojoSoup" />
