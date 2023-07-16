@@ -31,7 +31,7 @@ The app will automatically reload when any of the source files is edited.
 
 `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  
 
-`npm run build:prod` for production build, update environment.prod.ts to match the host environment.
+`npm run build:prod` to build project for dev deployment. Build artifacts will be stored in the `dist/` directory.
 
 ## Tests
 
