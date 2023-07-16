@@ -19,41 +19,35 @@ This project was originally generated with [Angular CLI](https://github.com/angu
 
 ## Development server
 
-The app will automatically reload when any of the source files changes. Navigate to `http://localhost:4300/`
+The app will automatically reload when any of the source files is edited.
 
-Run `npm run start` for a dev server.
+`npm run start` to serve project as local dev server. Navigate to `http://localhost:4300/`
 
-Run `npm run mock:server` for a mock server alone. Will mock dev api endpoints with local data and automatically reload when mocks/data.json changes.  
+`npm run start:mock` to serve project and mock data as local dev server. Navigate to `http://localhost:4300/`
 
-Run `npm run start:mock` for both local data via mock server and dev server.
+`npm run mock:server` for a mock server alone. Will mock dev api endpoints with local data and automatically reload when mocks/data.json is edited.  
 
-## Build
+## Production
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  
+`npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  
 
-Run `npm run build:prod` for production build, update environment.prod.ts to match the host environment.
+`npm run build:prod` for production build, update environment.prod.ts to match the host environment.
 
-## Running Lint tests
+## Tests
 
-Run `npm run lint` to execute the Lint tests with [TSLint](https://palantir.github.io/tslint/)
+`npm run lint` static analysis TypeScript linter with [TSLint](https://palantir.github.io/tslint/)
 
-## Running unit tests
+`npm run test` unit tests with [Karma](https://karma-runner.github.io)
 
-Run `npm run test` to execute the unit tests with [Karma](https://karma-runner.github.io)
+`npm run e2e` e2e tests with [Jasmine](https://jasmine.github.io/) and [Protractor](http://www.protractortest.org/)
 
-## Running end-to-end tests
-
-Run `npm run e2e` to execute the end-to-end tests with [Jasmine](https://jasmine.github.io/) and [Protractor](http://www.protractortest.org/)
-
-With local data via mock server: `npm run e2e:mock`
+`npm run e2e:mock` e2e tests with local mock data server
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component.
+`ng generate component component-name` to generate a new component.
 
 You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-
 
 ## Browser Support
 
