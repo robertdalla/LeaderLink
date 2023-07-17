@@ -1,6 +1,6 @@
 # LeaderLink
 
-LeaderLink is a single page application, a web app for managing and tracking the progress of a leadership program.
+LeaderLink is a Single Page Application for managing and tracking the progress of a leadership program.
 The app is responsive across desktop, tablet and mobile devices, built with Angular @^12 and Typescript @~4.3, Bootstrap @~4.5 and Sass. NgRx is used for state management.
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) @8 and then progressively upgraded to @^12 which is the last version to support [TSLint](https://palantir.github.io/tslint/) tests and e2e tests with [Protractor](http://www.protractortest.org/)
@@ -23,15 +23,15 @@ The app will automatically reload when any of the source files is edited.
 
 `npm run start` to serve project as local dev server. Navigate to `http://localhost:4300/`
 
-`npm run start:mock` to serve project and mock data as local dev server. Navigate to `http://localhost:4300/`
+`npm run start:mock` to serve project as local dev server with mock data server. Navigate to `http://localhost:4300/`
 
-`npm run mock:server` for a mock server alone. Will mock dev api endpoints with local data and automatically reload when mocks/data.json is edited.  
+`npm run mock:server` for a mock data server alone. API endpoints with local data.  
+
+`npm run build` to build the project for dev deployment. Build artifacts will be stored in the `dist/` directory.
 
 ## Production
 
-`npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.  
-
-`npm run build:prod` to build project for dev deployment. Build artifacts will be stored in the `dist/` directory.
+`npm run build:prod` to build project for production deployment. Build artifacts will be stored in the `dist/` directory.
 
 ## Tests
 
