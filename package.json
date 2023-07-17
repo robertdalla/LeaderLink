@@ -22,7 +22,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e:mock": "concurrently --kill-others \"npm run mock:server:e2e\" \"npm run e2e\"",
-    "build:prod": "ng build --configuration production --build-optimizer=true",
+    "build:prod": "ng build --configuration=production",
     "mock:server": "nodemon --watch mocks --exec json-server mocks/data.js --routes mocks/routes.json",
     "mock:server:e2e": "nodemon --watch mocks --exec json-server mocks/data-e2e.js --routes mocks/routes.json"
   },
