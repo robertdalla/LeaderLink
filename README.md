@@ -1,4 +1,4 @@
-# LeaderLink
+## LeaderLink
 
 LeaderLink is a Single Page Application for managing and tracking the progress of a leadership program.
 
@@ -10,7 +10,7 @@ The app is responsive across desktop, tablet and mobile devices, built with Angu
 
 <img src="https://user-images.githubusercontent.com/8167628/217881229-447a923c-b06c-4f0f-88f0-31858e1c5cfb.png" alt="Screenshot mobile phone" width="auto" height="auto">
 
-### Frameworks and Libraries
+## Frameworks and Libraries
 
 | angular @^12 | ng-bootstrap with bootstrap @~4.5 | ng-draggable |
 |--------------|-----------------------------------|--------------|
