@@ -1,11 +1,9 @@
 ## LeaderLink
 
-LeaderLink is a Single Page Application for managing and tracking the progress of a leadership program.
+LeaderLink is a intranet Single Page Application for managing and tracking the progress of a leadership program. It is designed to be hosted within Microsoft Authenticated platforms (Sharepoint, Azure...) since the data come from Sharepoint.
 
 The app is responsive across desktop, tablet and mobile devices, built with Angular @^12 and Typescript @~4.3, Bootstrap @~4.5 and Sass. NgRx is used for state management.
-
-### [Live demo](https://leaderlink.dmxnetworks.com.au/)
-
+###
 <img src="https://user-images.githubusercontent.com/8167628/217879827-9837a0ef-c178-4390-ac25-baa0fb4b2c96.png" alt="Screenshot tablet/laptop/desktop" width="auto" height="auto">
 
 <img src="https://user-images.githubusercontent.com/8167628/217881229-447a923c-b06c-4f0f-88f0-31858e1c5cfb.png" alt="Screenshot mobile phone" width="auto" height="auto">

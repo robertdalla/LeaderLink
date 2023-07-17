@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/leaderLink",
+            "outputPath": "dist",
             "index": "src/index.aspx",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

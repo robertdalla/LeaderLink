@@ -3,8 +3,8 @@
   "version": "1.1.1",
   "private": true,
   "author": "Robert Dalla & Tom Banh for Mojo Soup Pty Ltd",
-  "description": "Mobile application for PowerLink",
-  "homepage": "https://leaderlink.dmxnetworks.com.au",
+  "description": "Single Page Application for managing and tracking the progress of a leadership program.",
+  "homepage": "https://github.com/robertdalla/LeaderLink.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/robertdalla/LeaderLink.git"
